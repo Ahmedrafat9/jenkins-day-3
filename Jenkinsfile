@@ -23,7 +23,7 @@ pipeline {
                 sh 'ls -al'
                 sh 'ls -al k8s'
             }
-        }
+        }        
 
         stage('Verify') {
             steps {
