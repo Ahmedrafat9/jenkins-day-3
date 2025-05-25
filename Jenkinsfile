@@ -18,6 +18,12 @@ pipeline {
                 sh 'kubectl apply -f k8s/service.yaml'
             }
         }
+        stage('Debug Workspace') {
+            steps {
+                sh 'ls -al'
+                sh 'ls -al k8s'
+            }
+        }
 
         stage('Verify') {
             steps {
